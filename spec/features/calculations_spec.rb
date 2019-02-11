@@ -461,8 +461,9 @@ describe "/random/new" do
       fill_in "Minimum", with: 1.0
       fill_in "Maximum", with: 10.0
       click_button "Pick random number"
-      page.all("dd").each do |el|
-        num = el.text.to_f
+      # Array containing each number rendered on the random/results page
+      numbers_on_page = page.text.scan(/\d+\.\d*/).map(&:to_f)
+      numbers_on_page.each do |num|
         if num != 1 && num != 10
           random_numbers.push(num)
         end
