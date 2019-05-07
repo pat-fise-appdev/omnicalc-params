@@ -25,6 +25,8 @@
 # Ignore dotenv files
 /.env*
 
+.setup_runs
+
 # Ignore whitelist.yml
 /whitelist.yml
 
