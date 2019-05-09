@@ -123,8 +123,8 @@ The way it should work is:
     - If I submit that form, I should see the square root of the number that I entered.
  - If I visit the URL [http://localhost:3000/payment/new](http://localhost:3000/payment/new), I should see a form with labels and inputs to enter three values:
     - An APR (annual percentage rate). (Since our users are no longer limited to integers, we can avoid thinking in basis points. Phew!)
-    - A number of _years_ remaining
-    - The principal
+    - A number of _years_ remaining.
+    - The present value.
     - If I submit that form, I should see the **monthly** payment due given the values that I entered.
     - Since the units of the inputs are different, this **will not use the exact same code as the payment task from Part I**.
  - If I visit the URL [http://localhost:3000/random/new](http://localhost:3000/random/new), I should see a form with labels and inputs to enter two numbers, a minimum and a maximum.
