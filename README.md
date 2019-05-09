@@ -129,3 +129,5 @@ The way it should work is:
     - Since the units of the inputs are different, this **will not use the exact same code as the payment task from Part I**.
  - If I visit the URL [http://localhost:3000/random/new](http://localhost:3000/random/new), I should see a form with labels and inputs to enter two numbers, a minimum and a maximum.
     - If I submit that form, I should see a random number that falls between the numbers that I entered.
+
+Play around and try various inputs in [the target](http://omnicalc-params.herokuapp.com/) to see examples of how each form should behave.
