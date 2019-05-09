@@ -142,7 +142,7 @@ Play around and try various inputs in [the target](http://omnicalc-params.heroku
  - The same goes for the copy on the button to submit the form.
  - Any invalid HTML within a form will cause the test to fail, e.g. an orphaned closing `</div>` tag. Keep your code neatly indented to help avoid this.
 
-An example of a valid form:
+An example of a valid form; in particular, notice the `id=""` and `for=""` attributes:
 
 ```html
 <form action="/random/results">
