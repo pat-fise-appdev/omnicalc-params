@@ -131,3 +131,38 @@ The way it should work is:
     - If I submit that form, I should see a random number that falls between the numbers that I entered.
 
 Play around and try various inputs in [the target](http://omnicalc-params.herokuapp.com/) to see examples of how each form should behave.
+
+### Valid, accessible forms
+
+**In order for your tests to pass**, you must build _valid_ forms:
+
+ - Each `<input>` in the form must have a unique `id=""` attribute.
+ - The `<label>` associated with the `<input>` should have a `for=""` attribute that matches the value of the `<input>`'s `id`.
+ - The copy within the `<label>` must exactly match the target — spelling, capitalization, and punctuation matter.
+ - The same goes for the copy on the button to submit the form.
+
+An example of a valid form:
+
+```html
+<form action="/random/results">
+  <div>
+    <label for="min_input">
+      Minimum
+    </label>
+
+    <input id="min_input" text="text" name="user_min" placeholder="E.g. 1.5">
+  </div>
+
+  <div>
+    <label for="max_input">
+      Maximum
+    </label>
+
+    <input id="max_input" text="text" name="user_max" placeholder="E.g. 4.5">
+  </div>
+
+  <button>
+    Pick random number
+  </button>
+</form>
+```
