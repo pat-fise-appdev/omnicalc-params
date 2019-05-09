@@ -119,7 +119,3 @@ The way it should work is:
  - Implement the following calculators (without any styling, just functionality):
     - [Word Count](http://omnicalc-target.herokuapp.com/word_count/new)
     - [Descriptive Statistics](http://omnicalc-target.herokuapp.com/descriptive_statistics/new)
-
-## Stretch Goals
-
- - [Bootstrap it](http://getbootstrap.com) to make it look similar to [the real Omnicalc](http://omnicalc-target.herokuapp.com/). We've already connected `bootstrap.css` and [Font Awesome](http://fontawesome.io/icons/) for you, so you can just start using them.

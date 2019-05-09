@@ -1,32 +1,84 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>OmnicalcParams</title>
-  <%= csrf_meta_tags %>
+  <head>
+    <title>Target Omnicalc Params</title>
+    <%= csrf_meta_tags %>
 
-  <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
 
-  <!-- Connect to Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
 
-  <!-- Connect to Font Awesome CSS -->
-  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+          <table class="table" style="width: 100%">
+            <tr>
+              <td>
+                <strong>Part I Targets</strong>
+              </td>
 
-  <!-- Connect to Bootstrap Javascript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+              <td>
+                <a href="/flexible/square/5">
+                  Example of Square with Flexible Path Segment (using 5)
+                </a>
+              </td>
 
-  <%= javascript_include_tag 'application' %>
-</head>
+              <td>
+                <a href="/flexible/square_root/8">
+                  Example of Square Root with Flexible Path Segment (using 8)
+                </a>
+              </td>
 
-<body>
-  <div class="container">
-    <%= yield %>
-  </div>
+              <td>
+                <a href="/flexible/payment/410/30/250000">
+                  Example of Payment with Flexible Path Segments
+                </a>
+              </td>
 
-  <div class="rails-toolbar">
-    <a href="/git" target="_blank" class="rails-toolbar-button">
-      Git
-    </a>
-  </div>
-</body>
+              <td>
+                <a href="/flexible/random/50/100">
+                  Example of Random with Flexible Path Segments
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <strong>Part II Targets</strong>
+              </td>
+
+              <td>
+                <a href="/square/new">
+                  Square with Form
+                </a>
+              </td>
+
+              <td>
+                <a href="/square_root/new">
+                  Square Root with Form
+                </a>
+              </td>
+
+              <td>
+                <a href="/payment/new">
+                  Payment with Form
+                </a>
+              </td>
+
+              <td>
+                <a href="/random/new">
+                  Random with Form
+                </a>
+              </td>
+            </tr>
+          </table>
+
+          <%= yield %>
+
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
