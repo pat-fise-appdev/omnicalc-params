@@ -50,7 +50,7 @@ If I visit [http://localhost:3000/flexible/square_root/8](http://localhost:3000/
 
 > ## Flexible Square Root
 >
-> The square root of 8.0 is 2.83.
+> The square root of 8 is 2.8284271247461903.
 
 ### Payment with flexible path segments
 
