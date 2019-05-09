@@ -12,7 +12,7 @@ Dynamic web applications are more interesting than static websites for one reaso
  1. Navigate to your live application preview.
  1. You'll see the standard "You're on Rails" welcome page for a brand new, blank Rails application.
  1. As you work, remember to navigate to `/git` often and **always be committing.**
- 1. `rails grade` when you're ready for feedback.
+ 1. `rails grade` when you're ready for feedback, but remember that your job is to **first make your app match the target**. For each task, first manually test your app against the target's behavior before you check it with `rails grade`.
 
 ## Part I: Flexible Routes
 
@@ -70,6 +70,8 @@ I should see the **monthly** payment due, assuming that:
     ![Payment formula](payment_formula.gif?raw=true "Payment formula")
 
     (The image of the formula above will only render if you're viewing this README on GitHub.com. Alternatively, the image is located at `/payment_formula.gif` in the repository.)
+ - Rails has [number_to_currency](https://api.rubyonrails.org/classes/ActionView/Helpers/NumberHelper.html#method-i-number_to_currency) and [number_to_percentage](https://api.rubyonrails.org/classes/ActionView/Helpers/NumberHelper.html#method-i-number_to_percentage) helper methods available **in view templates** that might come in handy for formatting the output.
+ - Be careful with your units — what should be monthly? annual? percentage? rate?
 
 #### Example
 
@@ -124,5 +126,6 @@ The way it should work is:
     - A number of _years_ remaining
     - The principal
     - If I submit that form, I should see the **monthly** payment due given the values that I entered.
+    - Since the units of the inputs are different, this **will not use the exact same code as the payment task from Part I**.
  - If I visit the URL [http://localhost:3000/random/new](http://localhost:3000/random/new), I should see a form with labels and inputs to enter two numbers, a minimum and a maximum.
     - If I submit that form, I should see a random number that falls between the numbers that I entered.
