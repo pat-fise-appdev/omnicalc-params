@@ -140,7 +140,7 @@ Play around and try various inputs in [the target](http://omnicalc-params.heroku
  - The `<label>` associated with the `<input>` should have a `for=""` attribute that matches the value of the `<input>`'s `id`.
  - The copy within the `<label>` must exactly match the target — spelling, capitalization, and punctuation matter.
  - The same goes for the copy on the button to submit the form.
- - Any invalid HTML within a form will cause the test to fail, e.g. an orphaned closing tag.
+ - Any invalid HTML within a form will cause the test to fail, e.g. an orphaned closing `</div>` tag. Keep your code neatly indented to help avoid this.
 
 An example of a valid form:
 
