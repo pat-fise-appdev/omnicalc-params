@@ -151,7 +151,7 @@ An example of a valid form:
       Minimum
     </label>
 
-    <input id="min_input" text="text" name="user_min" placeholder="E.g. 1.5">
+    <input id="min_input" type="text" name="user_min" placeholder="E.g. 1.5">
   </div>
 
   <div>
@@ -159,7 +159,7 @@ An example of a valid form:
       Maximum
     </label>
 
-    <input id="max_input" text="text" name="user_max" placeholder="E.g. 4.5">
+    <input id="max_input" type="text" name="user_max" placeholder="E.g. 4.5">
   </div>
 
   <button>
