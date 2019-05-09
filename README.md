@@ -15,75 +15,90 @@ Dynamic web applications are more interesting than static websites for one reaso
 
 ## Part I: Flexible Routes
 
-The way it should work is:
+### Square with flexible path segment
 
- - If I visit a URL of the pattern
+If I visit a URL of the pattern
 
-    ```
-    /flexible/square/:number
-    ```
+```
+/flexible/square/:number
+```
 
-    I should see the square of the number in the third segment of the path. I should be able to enter any _integer_ in the third segment of the path; but not a decimal number (since you can't put dots in the middle of URLs).
+I should see the square of the number in the third segment of the path. I should be able to enter any _integer_ in the third segment of the path; but not a decimal number (since you can't put dots in the middle of URLs).
 
- - If I visit a URL of the pattern
+#### Example
 
-   ```
-   /flexible/square_root/:number
-   ```
+If I visit [http://localhost:3000/flexible/square/5](http://localhost:3000/flexible/square/5), I should see something like
 
-   I should see the square root of the number in the third segment of the path. I should be able to enter any _integer_ in the third segment of the path; but not a decimal number (since you can't put dots in the middle of URLs).
+> ## Flexible Square
+>
+> The square of 5 is 25.
 
- - If I visit a URL of the pattern
+### Square Root with flexible path segment
 
-   ```
-   /flexible/payment/:basis_points/:number_of_years/:present_value
-   ```
+If I visit a URL of the pattern
 
-   I should see the **monthly** payment due, assuming that
+```
+/flexible/square_root/:number
+```
 
-   - the integer in the third segment of the path is an _annual_ interest rate _in basis points_, or hundredths of a percent
-   - the integer in the fourth segment of the path is the number of _years_ remaining
-   - the integer in the fifth segment of the path is the present value
+I should see the square root of the number in the third segment of the path. I should be able to enter any _integer_ in the third segment of the path; but not a decimal number (since you can't put dots in the middle of URLs).
 
-        ![Payment formula](payment_formula.gif?raw=true "Payment formula")
+#### Example
 
-    (The image of the formula above will only render if you're viewing this README on GitHub.com. Alternatively, the image is located at `/payment_formula.gif`.)
+If I visit [http://localhost:3000/flexible/square_root/8](http://localhost:3000/flexible/square_root/8), I should see something like
 
- - If I visit a URL of the pattern
+> ## Flexible Square Root
+>
+> The square root of 8.0 is 2.83.
 
-   ```
-   /flexible/random/:min/:max
-   ```
+### Payment with flexible path segments
 
-   I should see a random number that falls between the integers in the third and fourth segments of the path.
+If I visit a URL of the pattern
 
-### Examples
+```
+/flexible/payment/:basis_points/:number_of_years/:present_value
+```
 
- - If I visit [http://localhost:3000/flexible/square/5](http://localhost:3000/flexible/square/5), I should see something like
+I should see the **monthly** payment due, assuming that:
 
-    > ## Flexible Square
-    >
-    > The square of 5 is 25.
+ - The integer in the third segment of the path is an _annual_ interest rate _in basis points_, or hundredths of a percent.
+ - The integer in the fourth segment of the path is the number of _years_ remaining.
+ - The integer in the fifth segment of the path is the present value.
+ - Use this formula to calculate the payment:
 
- - If I visit [http://localhost:3000/flexible/square_root/8](http://localhost:3000/flexible/square_root/8), I should see something like
+    ![Payment formula](payment_formula.gif?raw=true "Payment formula")
 
-    > ## Flexible Square Root
-    >
-    > The square root of 8.0 is 2.83.
+    (The image of the formula above will only render if you're viewing this README on GitHub.com. Alternatively, the image is located at `/payment_formula.gif` in the repository.)
 
- - If I visit [http://localhost:3000/flexible/payment/410/30/250000](http://localhost:3000/flexible/payment/410/30/250000), I should see something like
+#### Example
 
-    > ## Flexible Payment
-    >
-    > A 30 year loan of $250,000, with an annual interest rate of 4.10%, requires a monthly payment of $1,208.00.
+If I visit [http://localhost:3000/flexible/payment/410/30/250000](http://localhost:3000/flexible/payment/410/30/250000), I should see something like
 
- - If I visit [http://localhost:3000/flexible/random/50/100](http://localhost:3000/flexible/random/50/100), I should see something like
+> ## Flexible Payment
+>
+> A 30 year loan of $250,000, with an annual interest rate of 4.10%, requires a monthly payment of $1,208.00.
 
-    > ## Flexible Random Number
-    >
-    > A random number between 50 and 100 is 87.
+### Random with flexible path segments
 
-**All of these should work no matter what integers I type into the flexible segments of the path.**
+If I visit a URL of the pattern
+
+```
+/flexible/random/:min/:max
+```
+
+I should see a random number that falls between the integers in the third and fourth segments of the path.
+
+#### Example
+
+If I visit [http://localhost:3000/flexible/random/50/100](http://localhost:3000/flexible/random/50/100), I should see something like
+
+> ## Flexible Random Number
+>
+> A random number between 50 and 100 is 87.
+
+### Notes for flexible path segment tasks
+
+**All of the above should work no matter what integers I type into the flexible segments of the path.**
 
 Remember:
 
