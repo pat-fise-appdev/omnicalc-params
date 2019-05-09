@@ -12,6 +12,7 @@ Dynamic web applications are more interesting than static websites for one reaso
  1. Navigate to your live application preview.
  1. You'll see the standard "You're on Rails" welcome page for a brand new, blank Rails application.
  1. As you work, remember to navigate to `/git` often and **always be committing.**
+ 1. `rails grade` when you're ready for feedback.
 
 ## Part I: Flexible Routes
 
