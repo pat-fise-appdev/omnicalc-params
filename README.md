@@ -134,12 +134,13 @@ Play around and try various inputs in [the target](http://omnicalc-params.heroku
 
 ### Valid, accessible forms
 
-**In order for your tests to pass**, you must build _valid_ forms:
+**In order for your tests to pass**, you must build _valid_ forms (your Chrome browser _may_ tolerate invalid forms while you are manually testing, but automated test suites reject invalid forms):
 
  - Each `<input>` in the form must have a unique `id=""` attribute.
  - The `<label>` associated with the `<input>` should have a `for=""` attribute that matches the value of the `<input>`'s `id`.
  - The copy within the `<label>` must exactly match the target — spelling, capitalization, and punctuation matter.
  - The same goes for the copy on the button to submit the form.
+ - Any invalid HTML within a form will cause the test to fail, e.g. an orphaned closing tag.
 
 An example of a valid form:
 
